@@ -8,19 +8,19 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coit11134.assignment2.vehicleregistrationgui.FXMLMenuController">
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TitledPane alignment="CENTER" animated="false" prefHeight="26.0" prefWidth="559.0" text="Register Application- Enter Order" />
-      <Button fx:id="buttonAddProduct" layoutX="192.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleButtonAddProductAction" prefHeight="30.0" prefWidth="164.0" text="Add Product to Order" />
+      <Button fx:id="buttonAddProduct" layoutX="24.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleButtonAddProductAction" prefHeight="30.0" prefWidth="149.0" text="Add Product to Order" />
       <Button fx:id="buttonSavePurchase" layoutX="381.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleButtonSavePurchaseAction" prefHeight="30.0" prefWidth="164.0" text="Save Purchase" />
       <Button fx:id="buttonExit" layoutX="381.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleButtonExitAction" prefHeight="30.0" prefWidth="164.0" text="Back" />
       <TextArea fx:id="tfOrderDis" layoutX="192.0" layoutY="45.0" prefHeight="250.0" prefWidth="353.0" />
-      <TextField fx:id="tfCustomerName" layoutX="23.0" layoutY="61.0" promptText="Customer Name" />
-      <TextField fx:id="tfCustomerPh" layoutX="23.0" layoutY="109.0" promptText="Customer Phone Number" />
-      <TextField fx:id="tfProductID" layoutX="23.0" layoutY="208.0" promptText="Product ID" />
-      <TextField fx:id="tfProductQuantity" layoutX="23.0" layoutY="259.0" promptText="Product Quantity" />
-      <TextField fx:id="tfProductPrice" layoutX="23.0" layoutY="311.0" promptText="Product Price" />
-      <CheckBox fx:id="cbPaymentType" layoutX="23.0" layoutY="162.0" mnemonicParsing="false" text="Is Payment Cash" />
-      <Label layoutX="23.0" layoutY="338.0" text="Only price of singular item" />
+      <TextField fx:id="tfCustomerName" layoutX="24.0" layoutY="45.0" promptText="Customer Name" />
+      <TextField fx:id="tfCustomerPh" layoutX="24.0" layoutY="93.0" promptText="Customer Phone Number" />
+      <TextField fx:id="tfProductID" layoutX="24.0" layoutY="192.0" promptText="Product ID" />
+      <TextField fx:id="tfProductQuantity" layoutX="24.0" layoutY="243.0" promptText="Product Quantity" />
+      <TextField fx:id="tfProductPrice" layoutX="24.0" layoutY="295.0" promptText="Product Price" />
+      <CheckBox fx:id="cbPaymentType" layoutX="24.0" layoutY="146.0" mnemonicParsing="false" text="Is Payment Cash" />
+      <Label layoutX="24.0" layoutY="322.0" text="Only price of singular item" />
    </children>
 </AnchorPane>
