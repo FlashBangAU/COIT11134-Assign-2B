@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.eftposmachine.FXMLOrderEntryController">
    <children>
       <TitledPane alignment="CENTER" animated="false" prefHeight="26.0" prefWidth="559.0" text="Register Application- Enter Order" />
       <Button fx:id="buttonAddProduct" layoutX="24.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleButtonAddProductAction" prefHeight="30.0" prefWidth="149.0" text="Add Product to Order" />
