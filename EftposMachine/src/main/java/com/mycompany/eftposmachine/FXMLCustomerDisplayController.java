@@ -20,7 +20,7 @@ import javafx.scene.control.*;
  * 
  */
 public class FXMLCustomerDisplayController implements Initializable {
-
+//this is a comment
     //Instance variables for the UI controls 
     @FXML
     private TextArea taCustomerHistory;
