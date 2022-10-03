@@ -20,10 +20,10 @@ public class DataHandler {
     private final ArrayList<Money> moneyList;
     
     //Constructor method
-    public DataHandler(String ownerFileName, String vehicleFileName) {
+    public DataHandler(String customerFileName, String stockFileName, String moneyFileName) {
         this.customerFileName = customerFileName;
         this.stockFileName = stockFileName;
-        this.moneyFileName = moneyFileName
+        this.moneyFileName = moneyFileName;
         this.customerList = new ArrayList<>();
         this.stockList = new ArrayList<>();
         this.moneyList = new ArrayList<>();
