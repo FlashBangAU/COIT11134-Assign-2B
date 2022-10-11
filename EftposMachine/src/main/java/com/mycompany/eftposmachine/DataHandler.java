@@ -226,16 +226,19 @@ public class DataHandler {
         }
     }//end of the SaveDatatoFiles method 
 
-    public void addCustomerRecord() {
-
+    public void addCustomerRecord(Customer customer) {
+        System.out.println("Record was added: " + ((Customer)customer).toString());
+        customerList.add(customer);
     }
 
-    public void addStockRecord() {
-
+    public void addStockRecord(Stock stock) {
+        System.out.println("Record was added: " + ((Stock)stock).toString());
+        stockList.add(stock);
     }
 
-    public void addMoneyRecord() {
-
+    public void addMoneyRecord(Money money) {
+        System.out.println("Record was added: " + ((Money)money).toString());
+        moneyList.add(money);
     }
 
 }

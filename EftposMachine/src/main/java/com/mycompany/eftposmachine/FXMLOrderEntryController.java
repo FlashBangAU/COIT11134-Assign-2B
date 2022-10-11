@@ -71,6 +71,16 @@ public class FXMLOrderEntryController implements Initializable {
         }
 
     }
+    //action handler for the add product to order button
+    @FXML
+    private void handleButtonAddProduct (ActionEvent event) throws Exception{
+        
+    }
+    //action handler for the save purchase button
+    @FXML
+    private void handleButtonSavePurchase (ActionEvent event) throws Exception{
+        
+    }
     
     /**
      * Initializes the controller class.

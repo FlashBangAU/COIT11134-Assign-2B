@@ -59,6 +59,16 @@ public class FXMLStockEntryController implements Initializable {
         }
 
     }
+    //Action handler for the add product to order button
+    @FXML
+    private void handleButtonAddProduct (ActionEvent event) throws Exception {
+        
+    }
+    //action handler for the save purchase button
+    @FXML
+    private void handleButtonSavePurchase (ActionEvent event) throws Exception{
+        
+    }
   
     /**
      * Initializes the controller class.
@@ -70,19 +80,6 @@ public class FXMLStockEntryController implements Initializable {
     }    
     
 }
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
 
-/**
- *
- * @author zacca
- */
-public class FXMLStockEntryController {
 
-    /**
-     * @param args the command line arguments
-     */
-    
-}
+
