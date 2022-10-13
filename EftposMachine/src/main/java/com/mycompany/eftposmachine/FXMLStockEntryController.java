@@ -67,7 +67,8 @@ public class FXMLStockEntryController implements Initializable {
     //action handler for the save purchase button
     @FXML
     private void handleButtonSavePurchase (ActionEvent event) throws Exception{
-        
+        //save data to the arraylist
+        data.saveDataToFiles();  
     }
   
     /**

@@ -4,8 +4,10 @@
  */
 package com.mycompany.eftposmachine;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Scanner;
@@ -239,6 +241,49 @@ public class DataHandler {
     public void addMoneyRecord(Money money) {
         System.out.println("Record was added: " + ((Money)money).toString());
         moneyList.add(money);
+    }
+    //method to create the files
+    public void createFiles(){
+        //create money file
+        try{
+            File moneyFile = new File("Money.txt");//creates object of file
+            if(moneyFile.exists()){//checks if file exists
+                 
+            }
+            else{
+                moneyFile.createNewFile();//makes the new file
+                JOptionPane.showMessageDialog(null, "File has been made");
+            }
+            
+        }catch(IOException e){
+              JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        //create stock file
+        try {
+            File stockFile = new File("Stock.txt");//create object of stock file
+            if (stockFile.exists()) {//checks if the file exists
+                
+            } else {
+                stockFile.createNewFile();//creates the new file
+                JOptionPane.showMessageDialog(null, "File has been made");
+            }
+        } catch (IOException e) {
+             JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
+        }
+        //create customer file
+        try {
+            File customerFile = new File("Customer.txt");//creates object of file
+            if (customerFile.exists()) {//checks if the file exists
+                
+            } else {
+                customerFile.createNewFile();//makes the new file
+                JOptionPane.showMessageDialog(null, "File has been made");
+                
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 
 }
