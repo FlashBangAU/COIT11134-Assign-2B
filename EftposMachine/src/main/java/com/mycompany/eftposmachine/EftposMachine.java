@@ -30,8 +30,7 @@ public class EftposMachine extends Application{
 
     @Override
     public void start(Stage stage) throws IOException {
-        //instantiate the method that creates the files
-        dataHandler.createFiles();
+        
         
         //Instantiates the DataHandler object
         dataHandler = new DataHandler("Customer.txt", "Stock.txt","Money.txt"); 

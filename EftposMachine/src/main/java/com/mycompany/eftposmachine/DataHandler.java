@@ -243,7 +243,7 @@ public class DataHandler {
         moneyList.add(money);
     }
     //method to create the files
-    public void createFiles(){
+  /*  public void createFiles(){
         //create money file
         try{
             File moneyFile = new File("Money.txt");//creates object of file
@@ -284,6 +284,6 @@ public class DataHandler {
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
         }
-    }
+    }*/
 
 }
