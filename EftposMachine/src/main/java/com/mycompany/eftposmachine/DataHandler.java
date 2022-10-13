@@ -229,17 +229,17 @@ public class DataHandler {
     }//end of the SaveDatatoFiles method 
 
     public void addCustomerRecord(Customer customer) {
-        System.out.println("Record was added: " + ((Customer)customer).toString());
+        JOptionPane.showMessageDialog(null, "Customer record added");
         customerList.add(customer);
     }
 
     public void addStockRecord(Stock stock) {
-        System.out.println("Record was added: " + ((Stock)stock).toString());
+        JOptionPane.showMessageDialog(null, "Stock record added");
         stockList.add(stock);
     }
 
     public void addMoneyRecord(Money money) {
-        System.out.println("Record was added: " + ((Money)money).toString());
+        JOptionPane.showMessageDialog(null, "Money record added");
         moneyList.add(money);
     }
     //method to create the files
