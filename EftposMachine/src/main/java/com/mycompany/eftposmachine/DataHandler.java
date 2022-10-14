@@ -18,7 +18,9 @@ import javax.swing.JOptionPane;
  *
  * @author 12177330
  */
+//This class is to Handle Data for the rest of the Application
 public class DataHandler {
+//initialise varibles and ArrayLists
 
     private final String customerFileName;
     private final String stockFileName;
@@ -38,6 +40,7 @@ public class DataHandler {
         readDataFiles();
     }
 
+    //prepares for customer file to customer ArrayList
     private Customer readCustomerRecord(StringTokenizer st) {
         int customerID = Integer.parseInt(st.nextToken());
         String customerName = st.nextToken();
@@ -50,6 +53,7 @@ public class DataHandler {
         return customer;
     }
 
+    //prepares for stock file to stock ArrayList
     private Stock readStockRecord(StringTokenizer st) {
         int productID = Integer.parseInt(st.nextToken());
         String productName = st.nextToken();
@@ -65,6 +69,7 @@ public class DataHandler {
         return stock;
     }
 
+    //prepares for money file to money ArrayList
     private Money readMoneyRecord(StringTokenizer st) {
         double amountStock = Double.parseDouble(st.nextToken());
         double amountSold = Double.parseDouble(st.nextToken());
@@ -76,6 +81,7 @@ public class DataHandler {
         return money;
     }
 
+    //reads files to respective ArrayList
     private void readDataFiles() {
         System.out.println("Retrieving records from files...");
         //Read customer records from the data file
@@ -158,132 +164,83 @@ public class DataHandler {
         }
     }//end of the readDataFiles method
 
+    //method to save ArrayLists to files
     public void saveDatatoFiles() {
         System.out.println("Saving records to files...");
         //Save customer records to the data file
-        try
-        {
+        try {
             Formatter out = new Formatter(customerFileName);    //open file
-       
+
             int totalCustomerNumber = customerList.size();
-        
-               
-            for (Customer curCustomer:customerList)
-            {   
-                    out.format((curCustomer).toString());
-                    System.out.println("Customer: " + (curCustomer).toString());    
+
+            for (Customer curCustomer : customerList) {
+                out.format((curCustomer).toString());
+                System.out.println("Customer: " + (curCustomer).toString());
             }
-            
+
             System.out.println("Total number of customer records saved: " + totalCustomerNumber);
 
             out.close();//close file
-           } catch(SecurityException ex)  {
-                 JOptionPane.showMessageDialog(null,"SecurityException: "+ ex.getMessage(),"Error",JOptionPane.INFORMATION_MESSAGE);
-           }  catch(FileNotFoundException ex)   {
-                 JOptionPane.showMessageDialog(null,"FileNotFoundException: " + ex.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
+        } catch (SecurityException ex) {
+            JOptionPane.showMessageDialog(null, "SecurityException: " + ex.getMessage(), "Error", JOptionPane.INFORMATION_MESSAGE);
+        } catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "FileNotFoundException: " + ex.getMessage(), "Error", JOptionPane.INFORMATION_MESSAGE);
         }
         //Save stock records to the data file
-        try
-        {
+        try {
             Formatter out = new Formatter(stockFileName);    //open file
-       
+
             int totalStockNumber = stockList.size();
-        
-               
-            for (Stock curStock:stockList)
-            {   
-                    out.format((curStock).toString());
-                    System.out.println("Stock: " + (curStock).toString());    
+
+            for (Stock curStock : stockList) {
+                out.format((curStock).toString());
+                System.out.println("Stock: " + (curStock).toString());
             }
-            
+
             System.out.println("Total number of stock records saved: " + totalStockNumber);
 
             out.close();//close file
-           } catch(SecurityException ex)  {
-                 JOptionPane.showMessageDialog(null,"SecurityException: "+ ex.getMessage(),"Error",JOptionPane.INFORMATION_MESSAGE);
-           }  catch(FileNotFoundException ex)   {
-                 JOptionPane.showMessageDialog(null,"FileNotFoundException: " + ex.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
+        } catch (SecurityException ex) {
+            JOptionPane.showMessageDialog(null, "SecurityException: " + ex.getMessage(), "Error", JOptionPane.INFORMATION_MESSAGE);
+        } catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "FileNotFoundException: " + ex.getMessage(), "Error", JOptionPane.INFORMATION_MESSAGE);
         }
         //Save money records to the data file
-        try
-        {
+        try {
             Formatter out = new Formatter(moneyFileName);    //open file
-       
+
             int totalMoneyNumber = moneyList.size();
-        
-               
-            for (Money curMoney:moneyList)
-            {   
-                    out.format((curMoney).toString());
-                    System.out.println("Money: " + (curMoney).toString());    
+
+            for (Money curMoney : moneyList) {
+                out.format((curMoney).toString());
+                System.out.println("Money: " + (curMoney).toString());
             }
-            
+
             System.out.println("Total number of money records saved: " + totalMoneyNumber);
 
             out.close();//close file
-           } catch(SecurityException ex)  {
-                 JOptionPane.showMessageDialog(null,"SecurityException: "+ ex.getMessage(),"Error",JOptionPane.INFORMATION_MESSAGE);
-           }  catch(FileNotFoundException ex)   {
-                 JOptionPane.showMessageDialog(null,"FileNotFoundException: " + ex.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
+        } catch (SecurityException ex) {
+            JOptionPane.showMessageDialog(null, "SecurityException: " + ex.getMessage(), "Error", JOptionPane.INFORMATION_MESSAGE);
+        } catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "FileNotFoundException: " + ex.getMessage(), "Error", JOptionPane.INFORMATION_MESSAGE);
         }
     }//end of the SaveDatatoFiles method 
 
+    //method to add a Customer record from a data entry page
     public void addCustomerRecord(Customer customer) {
         JOptionPane.showMessageDialog(null, "Customer record added");
         customerList.add(customer);
     }
 
+    //method to add a StockCustomer record from a data entry page
     public void addStockRecord(Stock stock) {
         JOptionPane.showMessageDialog(null, "Stock record added");
         stockList.add(stock);
     }
 
+    //method to add a Money record from a data entry page
     public void addMoneyRecord(Money money) {
         JOptionPane.showMessageDialog(null, "Money record added");
         moneyList.add(money);
     }
-    //method to create the files
-  /*  public void createFiles(){
-        //create money file
-        try{
-            File moneyFile = new File("Money.txt");//creates object of file
-            if(moneyFile.exists()){//checks if file exists
-                 
-            }
-            else{
-                moneyFile.createNewFile();//makes the new file
-                JOptionPane.showMessageDialog(null, "File has been made");
-            }
-            
-        }catch(IOException e){
-              JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
-            
-        }
-        //create stock file
-        try {
-            File stockFile = new File("Stock.txt");//create object of stock file
-            if (stockFile.exists()) {//checks if the file exists
-                
-            } else {
-                stockFile.createNewFile();//creates the new file
-                JOptionPane.showMessageDialog(null, "File has been made");
-            }
-        } catch (IOException e) {
-             JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
-        }
-        //create customer file
-        try {
-            File customerFile = new File("Customer.txt");//creates object of file
-            if (customerFile.exists()) {//checks if the file exists
-                
-            } else {
-                customerFile.createNewFile();//makes the new file
-                JOptionPane.showMessageDialog(null, "File has been made");
-                
-            }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null,"IOException: " + e.getMessage(), "Error",JOptionPane.INFORMATION_MESSAGE);
-        }
-    }*/
-
 }

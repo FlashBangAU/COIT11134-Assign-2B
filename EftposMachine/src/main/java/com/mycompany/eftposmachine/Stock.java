@@ -8,7 +8,10 @@ package com.mycompany.eftposmachine;
  *
  * @author User
  */
+//This class is used for a Stock object
 public class Stock {
+//initialised varibles
+
     int productID;
     String productName;
     int productInStock;
@@ -17,6 +20,7 @@ public class Stock {
     double totalAmountSold;
     double totalAmountStock;
     double totalMoney;
+//constructor
 
     public Stock(int productID, String productName, int productInStock, int productSold, int productTotal, double totalAmountSold, double totalAmountStock, double totalMoney) {
         this.productID = productID;
@@ -29,6 +33,7 @@ public class Stock {
         this.totalMoney = totalMoney;
     }
 
+    //getters and setters
     public int getProductID() {
         return productID;
     }
@@ -93,10 +98,10 @@ public class Stock {
         this.totalMoney = totalMoney;
     }
 
+    //String override to release string varible
     @Override
     public String toString() {
         return "Stock{" + "productID=" + productID + ", productName=" + productName + ", productInStock=" + productInStock + ", productSold=" + productSold + ", productTotal=" + productTotal + ", totalAmountSold=" + totalAmountSold + ", totalAmountStock=" + totalAmountStock + ", totalMoney=" + totalMoney + '}';
     }
-    
-    
+
 }

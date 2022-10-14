@@ -8,13 +8,16 @@ package com.mycompany.eftposmachine;
  *
  * @author 12177330
  */
+//This class is used for a Money object
 public class Money {
+//initialised varibles
 
     double amountStock;
     double amountSold;
     double amountCash;
     double amountCard;
     double amountTotal;
+//constructor
 
     public Money(double amountStock, double amountSold, double amountCash, double amountCard, double amountTotal) {
         this.amountStock = amountStock;
@@ -24,6 +27,7 @@ public class Money {
         this.amountTotal = amountTotal;
     }
 
+    //getters and setters
     public double getAmountStock() {
         return amountStock;
     }
@@ -64,9 +68,10 @@ public class Money {
         this.amountTotal = amountTotal;
     }
 
+    //String override to release string varible
     @Override
     public String toString() {
         return "Money{" + "amountStock=" + amountStock + ", amountSold=" + amountSold + ", amountCash=" + amountCash + ", amountCard=" + amountCard + ", amountTotal=" + amountTotal + '}';
     }
-    
+
 }

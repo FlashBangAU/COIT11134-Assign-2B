@@ -8,12 +8,16 @@ package com.mycompany.eftposmachine;
  *
  * @author 12177330
  */
+//This class is used for a Customer object
 public class Customer {
+//initialised varibles
+
     int customerID;
     String customerName;
     int customerPh;
     int amountOfPurchases;
     double totalMoneySpent;
+//constructor
 
     public Customer(int customerID, String customerName, int customerPh, int amountOfPurchases, double totalMoneySpent) {
         this.customerID = customerID;
@@ -22,6 +26,7 @@ public class Customer {
         this.amountOfPurchases = amountOfPurchases;
         this.totalMoneySpent = totalMoneySpent;
     }
+//getters and setters
 
     public int getCustomerID() {
         return customerID;
@@ -62,6 +67,7 @@ public class Customer {
     public void setTotalMoneySpent(double totalMoneySpent) {
         this.totalMoneySpent = totalMoneySpent;
     }
+//String override to release string varible
 
     @Override
     public String toString() {

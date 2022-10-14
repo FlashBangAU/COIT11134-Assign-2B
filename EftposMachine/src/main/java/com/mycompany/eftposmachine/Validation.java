@@ -3,16 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
 package com.mycompany.eftposmachine;
+
 /**
  *
  * @author zacca
  */
+//class used to valid that values are appropriate
 public class Validation {
 
     /**
      * validation class
      */
-   public static boolean isNumeric(String param) {
+    public static boolean isNumeric(String param) {
         for (int i = 0; i < param.length(); i++) {
             if (!Character.isDigit(param.charAt(i))) {
                 return false;
