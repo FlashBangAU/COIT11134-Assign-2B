@@ -80,7 +80,7 @@ public class FXMLOrderEntryController implements Initializable {
     @FXML
     private void handleButtonSavePurchase (ActionEvent event) throws Exception{
         //saves data into the arraylist
-        data.addCustomerRecord();
+//        data.addCustomerRecord();
     }
     
     /**

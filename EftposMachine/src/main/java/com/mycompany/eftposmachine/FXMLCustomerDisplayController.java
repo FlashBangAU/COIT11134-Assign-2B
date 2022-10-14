@@ -26,7 +26,9 @@ public class FXMLCustomerDisplayController implements Initializable {
     private TextArea taCustomerHistory;
     
     DataHandler data; //Instance variable to hold a reference to the DataHandler object
-    
+//    str = data.getCustomerList()
+//    taCustomerHistory.setText(str);
+
     //Method to clear all fields on the scene
     private void clearAllFields()
     {
